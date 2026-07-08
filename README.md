@@ -21,6 +21,57 @@ your own limits) plus a five-question self-test. Where each skill is a
 situational checklist, the manual is the mindset they all share; read it once,
 then let the skills fire it at the right moment.
 
+### What's inside
+
+- **Nine principles**, each written as *procedure → worked example → the
+  failure it prevents*: (1) read what's actually being asked, (2) break the
+  problem into independently checkable pieces, (3) find where the risk actually
+  lives, (4) verify by re-deriving rather than recognizing, (5) separate known
+  from guessed and label it, (6) attack your own conclusion before shipping it,
+  (7) communicate answer → reasoning → risk, (8) the mistakes that look like
+  competence, (9) what to do when the problem exceeds your reach.
+- **A five-question self-test** to run on any answer before sending it.
+
+### How it differs from a skill
+
+The skills in this repo are *situational* — an agent auto-loads one only when a
+task matches its description (progressive disclosure). The operating manual is
+the opposite: a single *always-on* mindset. That means it isn't installed as a
+`SKILL.md`; you either read it yourself or wire it into an agent's standing
+instructions so it applies to **every** task, as described next.
+
+### Using it as a human
+
+Read it once end-to-end, then keep the five-question self-test somewhere handy
+(a pinned note, an editor snippet) and run it before you hit send on anything
+consequential. The worked examples are the fastest way in.
+
+### Wiring it into an agent
+
+**Per project (shared with your team):** reference it from the standing
+instructions file your agent already reads, so it applies to every task in the
+repo. Copy the manual to your repo root and add a pointer:
+
+```bash
+cp operating-manual.md ./operating-manual.md
+# then, in .github/copilot-instructions.md (Copilot) or AGENTS.md / CLAUDE.md:
+echo "Follow the reasoning discipline in [operating-manual.md](operating-manual.md) on every task." >> .github/copilot-instructions.md
+```
+
+VS Code Copilot reads `.github/copilot-instructions.md` automatically; Claude
+Code and other agents read `AGENTS.md` / `CLAUDE.md`. Any of them will pull in
+the linked manual as context.
+
+**Personal (all your projects):** paste the manual — or just the nine
+principle headers and the self-test — into your agent's personal/global
+instructions (in VS Code: *Copilot → Personal instructions*). Because it loads
+on every conversation, prefer a condensed version if your agent caps how much
+standing instruction it keeps in context.
+
+> Note: standing instructions *bias* an agent strongly but aren't a hard
+> guarantee every principle fires every time; they shape behavior, they don't
+> enforce it.
+
 ## Installation
 
 **Per project (recommended — shared with your team via source control):**
