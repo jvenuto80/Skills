@@ -12,6 +12,15 @@ delete — as a focused instruction file the agent loads only when relevant.
 Derived from [adamentwistle/fable-skills](https://github.com/adamentwistle/fable-skills)
 (MIT) with the changes listed under [What was improved](#what-was-improved).
 
+## Operating manual
+
+[operating-manual.md](operating-manual.md) is the reasoning philosophy behind
+these skills — nine principles for working carefully (read what's actually
+being asked, verify by re-deriving, find where the risk lives, route around
+your own limits) plus a five-question self-test. Where each skill is a
+situational checklist, the manual is the mindset they all share; read it once,
+then let the skills fire it at the right moment.
+
 ## Installation
 
 **Per project (recommended — shared with your team via source control):**
